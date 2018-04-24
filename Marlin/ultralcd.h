@@ -36,7 +36,7 @@
     #endif
   #endif
 
-  #define BUTTON_EXISTS(BN) (defined(BTN_## BN) && BTN_## BN >= 0)
+  #define BUTTON_EXISTS(BN) (BTN_##BN >= 0)
   #define BUTTON_PRESSED(BN) !READ(BTN_## BN)
 
   extern int16_t lcd_preheat_hotend_temp[2], lcd_preheat_bed_temp[2], lcd_preheat_fan_speed[2];
