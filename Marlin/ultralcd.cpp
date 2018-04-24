@@ -5000,26 +5000,26 @@ void lcd_reset_alert_level() { lcd_status_message_level = 0; }
           }
           #if BUTTON_EXISTS(UP)
             else if (BUTTON_PRESSED(UP)) {
-              encoderDiff = -(ENCODER_UD_STEPS);
-              next_button_update_ms = now + 300;
+				encoderDiff = ENCODER_LR_PULSES;
+				next_button_update_ms = now + 300;
             }
           #endif
           #if BUTTON_EXISTS(DWN)
             else if (BUTTON_PRESSED(DWN)) {
-              encoderDiff = ENCODER_UD_STEPS;
-              next_button_update_ms = now + 300;
+			  encoderDiff = -(ENCODER_LR_PULSES);
+			  next_button_update_ms = now + 300;
             }
           #endif
           #if BUTTON_EXISTS(LFT)
             else if (BUTTON_PRESSED(LFT)) {
-              encoderDiff = -(ENCODER_LR_PULSES);
-              next_button_update_ms = now + 300;
+				encoderDiff = ENCODER_UD_STEPS;
+				next_button_update_ms = now + 300;
             }
           #endif
           #if BUTTON_EXISTS(RT)
             else if (BUTTON_PRESSED(RT)) {
-              encoderDiff = ENCODER_LR_PULSES;
-              next_button_update_ms = now + 300;
+              encoderDiff = -(ENCODER_UD_STEPS);
+			  next_button_update_ms = now + 300;
             }
           #endif
 
